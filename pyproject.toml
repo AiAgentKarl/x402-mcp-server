@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "x402-mcp-server"
+version = "0.1.0"
+description = "x402 Payment Gateway for AI Agents — enable micropayments between agents using USDC on Solana"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "AiAgentKarl"}]
+keywords = ["mcp", "x402", "payments", "micropayments", "ai-agents", "solana", "usdc"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AiAgentKarl/x402-mcp-server"
+Repository = "https://github.com/AiAgentKarl/x402-mcp-server"
+Issues = "https://github.com/AiAgentKarl/x402-mcp-server/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
