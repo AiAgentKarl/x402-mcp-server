@@ -30,5 +30,8 @@ Homepage = "https://github.com/AiAgentKarl/x402-mcp-server"
 Repository = "https://github.com/AiAgentKarl/x402-mcp-server"
 Issues = "https://github.com/AiAgentKarl/x402-mcp-server/issues"
 
+[project.scripts]
+x402-server = "src.server:main"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
